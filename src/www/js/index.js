@@ -120,6 +120,7 @@ class DndForm extends React.Component {
 
             <div className="row">
               <div className="col-sm-6">
+                <div className="form-group">
                 <h1>Character Creation Form</h1>
                 <TextInput type="text" label="Your Name (Not your Character's Name)" name="player_name" onChange={this.update}/>
                 <TextInput type="text" label="Your Character's Name" name="character_name" onChange={this.update}/>
@@ -129,6 +130,7 @@ class DndForm extends React.Component {
                 <CharacterDetailsForm onUpdate={this.update} charData={this.state.charData} formDescription={this.getRaceDescription}/>
                 <AbilityScoresForm onUpdate={this.update} charData={this.state.charData}/>
                 <SkillsForm charData={this.state.charData} onUpdate={this.update} />
+                </div>
 
               </div>
               <div className="col-sm-6 output-column">
@@ -139,4 +141,4 @@ class DndForm extends React.Component {
 	}
 }
 
-ReactDOM.render(<DndForm/>, document.querySelector('main'));
+ReactDOM.render(<DndForm />, document.querySelector('main'));
